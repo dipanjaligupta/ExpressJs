@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <style>
+        body {
+      margin: 0;
+      padding-top: 96px; /* 90px height + 6px top offset */
+    }
+    .main{
+      height:90px;
+      width:100%;
+      background-color: #177fda; /* Alice Blue */
+      position: fixed;
+      top:6px;
+      z-index: 6;
+    }
+    h1{
+      font-size: 40px;
+      font-weight: 700;
+      text-shadow: 2px 1px 0px 0px solid #B0E0E6;
+      text-align: center;
+      color:white;
+      margin:20px;
+    }
+    h2{
+      font-size: 50px;
+      color: black;
+      font-weight: 700;
+      text-align: center;
+      margin:16px;
+    }
+    p{
+      font-size: 18px;
+      text-align: center;
+      padding: 0;
+      margin-left: 20px;
+      color:grey;
+    }
+    a{
+text-decoration: none;
+text-align: center;
+    }
+    .btn{
+      height:70px;
+      width:100%;
+      gap:20px;
+      display: flex;
+      justify-content: center;
+      
+    }
+    a.bt{
+      height:40px;
+      min-width:150px;
+      background-color: #dcdcdc;
+      color:black;
+      text-align: center;
+      padding: 5px;
+      border: none;
+      margin: 10px;
+      border-radius: 8px;
+      transition: 1s ease-in;
+    }
+    a.bt:hover{
+    background-color: #B0E0E6;
+    }
+
+  </style>
+</head>
+<body>
+<div class="main">
+<h1> My EJS Project </h1>
+</div>
+<h2> Welcome to EJS  </h2>
+<p>EJS (Embedded JavaScript) ek templating engine hai jo JavaScript ka use karke Html pages ko dynamically generate karne ke liye istemal ki jaati hai. <br>Iska upyog web development mein hota hai, khaaskar Node.js aur Express.js ke sath. <br>Ejs Html ke andar JavaScript ko embed karne ki suvidha deta hai, jisse aap real-time data ko Html pages mein dikhane ke liye loops,  conditions, aur variables ka upyog kar sakte hain. </p>
+<div class="btn">
+  <%buttons.forEach(function(btn) { %>
+     <a class="bt" href="<%= btn.route %>"><%= btn.label %></a>
+  <% }); %>
+</div>
+</body>
+</html>
